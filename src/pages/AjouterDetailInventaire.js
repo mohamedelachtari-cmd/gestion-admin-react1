@@ -1,0 +1,101 @@
+import "../CSS/Style.css";
+
+function Inventaire() {
+  return (
+    <div>
+      <h1 className="stats">Inventaire des matériels livrés</h1>
+
+      <h2>Détails de l'article</h2>
+
+      <table style={{ width: "100%", fontWeight: "bold" }}>
+        <tbody>
+          <tr>
+            <td>Acquisition :</td>
+            <td><span style={{ color: "red" }}></span></td>
+
+            <td>Lot numéro :</td>
+            <td><span style={{ color: "red" }}></span></td>
+
+            <td>Article numéro :</td>
+            <td><span style={{ color: "red" }}></span></td>
+          </tr>
+
+          <tr>
+            <td>Désignation :</td>
+            <td><span style={{ color: "red" }}></span></td>
+
+            <td>Marque :</td>
+            <td><span style={{ color: "red" }}></span></td>
+
+            <td>Modèle :</td>
+            <td><span style={{ color: "red" }}></span></td>
+          </tr>
+
+          <tr>
+            <td>Nombre de matériel :</td>
+            <td><span style={{ color: "red" }}></span></td>
+
+            <td>P.U (TTC) :</td>
+            <td><span style={{ color: "red" }}></span> MAD</td>
+
+            <td>Prix total :</td>
+            <td><span style={{ color: "red" }}></span> MAD</td>
+          </tr>
+
+          <tr>
+            <td>Date d'enregistrement :</td>
+            <td><span style={{ color: "red" }}></span></td>
+
+            <td>Par :</td>
+            <td><span style={{ color: "red" }}></span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br />
+
+      <center>
+        <button>Ajouter</button>
+        <button>Annuler</button>
+      </center>
+
+      <br />
+
+      <h2>Liste d'inventaire</h2>
+
+      <center>
+        <table border="1" style={{ width: "90%" }}>
+          <tbody>
+            <tr style={{ background: "#689FDD", color: "white" }}>
+              <th>ID</th>
+              <th>Désignation</th>
+              <th>Marque</th>
+              <th>Modèle</th>
+              <th>N° inventaire</th>
+              <th>N° série</th>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>PC Portable</td>
+              <td>HP</td>
+              <td>ProBook</td>
+
+              <td>
+                <input type="text" />
+                <span style={{ color: "red" }}>*</span>
+              </td>
+
+              <td>
+                <input type="text" />
+                <span style={{ color: "red" }}>*</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+  );
+}
+
+export default Inventaire;

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Consulter les acquisitions</title>
+
+<link rel="stylesheet" href="CSS/Style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script>
+function toggleDetails(row){
+    var next = row.nextElementSibling;
+    if(next.style.display === "none"){
+        next.style.display = "table-row";
+    }else{
+        next.style.display = "none";
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<h1 class="stats">Consulter les acquisitions</h1>
+
+<table style="width:100%; font-weight:bold">
+
+<tr>
+
+<td>
+Type d'acquisition :
+<select>
+<option>Choisir...</option>
+</select>
+</td>
+
+<td>
+Code :
+<input type="text">
+</td>
+
+<td>
+Du :
+<input type="date">
+</td>
+
+<td>
+A :
+<input type="date">
+</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<center>
+
+<button>Afficher</button>
+<button>Annuler</button>
+
+<br><br>
+
+<table border="1" style="width:90%">
+
+<tr style="background:#689FDD;color:white">
+
+<th>ID</th>
+<th>Type acquisition</th>
+<th>Code</th>
+<th>Montant</th>
+<th>Nombre lots</th>
+<th>Date</th>
+<th>Détails</th>
+
+</tr>
+
+<tr onclick="toggleDetails(this)">
+
+<td>1</td>
+<td>Achat</td>
+<td>ACQ001</td>
+<td>10000</td>
+<td>3</td>
+<td>01/01/2024</td>
+<td>Voir</td>
+
+</tr>
+
+<tr style="display:none">
+
+<td colspan="7">
+
+<table border="1" style="width:100%">
+
+<tr style="background:#cccccc">
+
+<th>Lot N°</th>
+<th>Nom du lot</th>
+<th>Montant</th>
+<th>Société</th>
+<th>Nombre articles</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+<td>Lot informatique</td>
+<td>3000</td>
+<td>HP</td>
+<td>10</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</center>
+
+</body>
+
+</html>

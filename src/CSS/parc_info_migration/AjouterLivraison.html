@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Ajouter une livraison</title>
+
+<link rel="stylesheet" href="CSS/Style.css">
+
+<script>
+function toggleRow(btn){
+let row = btn.parentNode.parentNode.nextElementSibling;
+if(row.style.display === "none"){
+row.style.display = "table-row";
+btn.textContent = "-";
+}else{
+row.style.display = "none";
+btn.textContent = "+";
+}
+}
+</script>
+
+</head>
+
+<body>
+
+<h1 class="stats">Ajouter une livraison</h1>
+
+<table style="width:100%; font-weight:bold">
+
+<tr>
+
+<td>Type d'acquisition :</td>
+<td>
+<select></select>
+</td>
+
+<td>Code :</td>
+<td>
+<input type="text">
+</td>
+
+<td>Du :</td>
+<td>
+<input type="date">
+</td>
+
+<td>A :</td>
+<td>
+<input type="date">
+</td>
+
+<td>Article livré :</td>
+<td>
+<select>
+<option>Oui</option>
+<option>Non</option>
+</select>
+</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<center>
+
+<button>Afficher</button>
+<button>Annuler</button>
+
+</center>
+
+<br>
+
+<center>
+
+<table border="1" style="width:90%">
+
+<tr style="background:#689FDD;color:white">
+
+<th></th>
+<th>Type acquisition</th>
+<th>Code acquisition</th>
+<th>Montant</th>
+<th>Nombre lots</th>
+<th>Date acquisition</th>
+
+</tr>
+
+<tr>
+
+<td>
+<button onclick="toggleRow(this)">+</button>
+</td>
+
+<td>Marché</td>
+<td>ACQ001</td>
+<td>100000</td>
+<td>3</td>
+<td>01/01/2024</td>
+
+</tr>
+
+<tr style="display:none">
+
+<td colspan="6">
+
+<table border="1" style="width:100%">
+
+<tr style="background:#ddd">
+
+<th>Lot</th>
+<th>Nom Lot</th>
+<th>Montant</th>
+<th>Société</th>
+<th>Nombre Articles</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+<td>Lot Informatique</td>
+<td>30000</td>
+<td>HP</td>
+<td>10</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</center>
+
+<br>
+
+<h2>Liste des articles livrés</h2>
+
+<center>
+
+<table border="1" style="width:95%">
+
+<tr style="background:#689FDD;color:white">
+
+<th>ID</th>
+<th>Acquisition</th>
+<th>Date Acq</th>
+<th>Lot</th>
+<th>Article Numéro</th>
+<th>Classification</th>
+<th>Nombre matériel</th>
+<th>Article livré</th>
+<th>Date livraison</th>
+<th>BL</th>
+<th>Modifier</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+<td>ACQ001</td>
+<td>01/01/2024</td>
+<td>Lot1</td>
+<td>ART001</td>
+<td>PC</td>
+<td>10</td>
+<td>Oui</td>
+<td>05/01/2024</td>
+<td>BL001</td>
+<td><button>Modifier</button></td>
+
+</tr>
+
+</table>
+
+</center>
+
+</body>
+
+</html>

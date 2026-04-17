@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Ajouter des caractéristiques</title>
+
+<link rel="stylesheet" href="CSS/Style.css">
+
+<script>
+function Confirm() {
+    if(confirm("Êtes-vous sûr de vouloir supprimer définitivement l'article ?")){
+        alert("Article supprimé");
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<h1 class="stats">Ajouter des caractéristiques</h1>
+
+<a href="#">Lots</a> > <a href="#">Articles</a>
+
+<h2>Caractéristiques</h2>
+
+<center>
+
+<table style="font-weight:bold">
+
+<tr>
+
+<td>
+Désignation :
+<span style="color:red"></span>
+</td>
+
+<td>
+Caractéristiques :
+<input type="text">
+</td>
+
+</tr>
+
+</table>
+
+<span style="color:red"></span>
+
+<br><br>
+
+<button>Ajouter</button>
+<button>Annuler</button>
+
+</center>
+
+
+<h2>Détails de l'article</h2>
+
+<table style="width:100%;font-weight:bold">
+
+<tr>
+
+<td>Acquisition : <span style="color:red"></span></td>
+
+<td>Lot numéro : <span style="color:red"></span></td>
+
+<td>Article numéro : <span style="color:red"></span></td>
+
+</tr>
+
+
+<tr>
+
+<td>Désignation : <span style="color:red"></span></td>
+
+<td>Marque : <span style="color:red"></span></td>
+
+<td>Modèle : <span style="color:red"></span></td>
+
+</tr>
+
+
+<tr>
+
+<td>Nombre de matériel : <span style="color:red"></span></td>
+
+<td>P.U (TTC) : <span style="color:red"></span> MAD</td>
+
+<td>Prix de l'article (TTC) : <span style="color:red"></span> MAD</td>
+
+</tr>
+
+</table>
+
+
+<center>
+
+<button>Modifier</button>
+<button onclick="Confirm()">Supprimer</button>
+
+</center>
+
+
+<h2>Caractéristiques</h2>
+
+<center>
+
+<table>
+
+<tr>
+
+<td>
+Caractéristique :
+<select></select>
+<button>+</button>
+</td>
+
+<td>
+Valeur :
+<input type="text">
+</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<button>Ajouter</button>
+
+<br><br>
+
+<table border="1" style="width:80%">
+
+<tr style="background:#689FDD;color:white">
+
+<th>ID</th>
+<th>Caractéristique</th>
+<th>Valeur</th>
+<th>Modifier</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+<td>Exemple</td>
+<td>Valeur</td>
+<td><button>Modifier</button></td>
+
+</tr>
+
+</table>
+
+</center>
+
+</body>
+</html>
