@@ -1,40 +1,12 @@
-function AjouterArticle() {
+import React from "react";
+
+function Article() {
   return (
-    <div>
-      <h1 className="stats">Ajouter des Articles</h1>
-
-      <h2>Désignation</h2>
-      <input type="text" />
-      <br /><br />
-
-      <button>Ajouter</button>
-      <button>Annuler</button>
-
-      <h2>Marque</h2>
-      <input type="text" />
-      <br /><br />
-
-      <button>Ajouter</button>
-      <button>Annuler</button>
-
-      <h2>Modèle</h2>
-
-      <select>
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-
-      <select>
-        <option>Option A</option>
-        <option>Option B</option>
-      </select>
-      
-      <br /><br />
-
-      <button>Ajouter</button>
-      <button>Annuler</button>
+    <div className="container mt-5 text-center">
+      <h1>Page Article</h1>
+      <p>Gestion des articles disponible.</p>
     </div>
   );
 }
 
-export default AjouterArticle;
+export default Article;
