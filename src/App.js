@@ -1,6 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
+/* Bootstrap */
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+/* CSS */
+import "./CSS/Style.css";
+
 /* Pages */
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -19,40 +26,136 @@ import AjouterLot from "./pages/AjouterLot";
 function App() {
   return (
     <BrowserRouter>
-      {/* Header */}
-      <header className="bg-light text-center p-3 shadow-sm">
+      {/* HEADER */}
+      <header className="bg-white text-center p-3 shadow-sm">
         <img
           src="https://www.mtedd.gov.ma/images/armoirie-site-web_plan-de-travail-1.png"
           alt="logo"
-          style={{ height: "120px" }}
+          style={{ height: "120px", maxWidth: "100%" }}
         />
       </header>
 
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-danger px-4">
-        <div className="navbar-brand text-white fw-bold">
-          Portail Admin
-        </div>
+      {/* NAVBAR */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-danger px-3 py-2 shadow-sm">
+        <div className="container-fluid">
 
-        <div className="d-flex gap-3 ms-auto flex-wrap">
-          <Link className="text-white text-decoration-none" to="/">Accueil</Link>
-          <Link className="text-white text-decoration-none" to="/about">À propos</Link>
-          <Link className="text-white text-decoration-none" to="/profile">Profil</Link>
-          <Link className="text-white text-decoration-none" to="/login">Login</Link>
+          <Link className="navbar-brand text-white fw-bold" to="/">
+            Portail Admin
+          </Link>
 
-          <Link className="text-white text-decoration-none" to="/ajouter-article">Article</Link>
-          <Link className="text-white text-decoration-none" to="/ajouter-acquisition">Acquisition</Link>
-          <Link className="text-white text-decoration-none" to="/ajouter-caracteristique">Caractéristique</Link>
-          <Link className="text-white text-decoration-none" to="/ajouter-bc-reparation">BC Réparation</Link>
-          <Link className="text-white text-decoration-none" to="/ajouter-detail-affectation">Affectation</Link>
-          <Link className="text-white text-decoration-none" to="/ajouter-detail-inventaire">Inventaire</Link>
-          <Link className="text-white text-decoration-none" to="/ajouter-livraison">Livraison</Link>
-          <Link className="text-white text-decoration-none" to="/ajouter-lot">Lot</Link>
+          <div className="d-flex gap-3 ms-auto align-items-center flex-wrap">
+
+            <Link className="text-white text-decoration-none nav-link-custom" to="/">
+              Accueil
+            </Link>
+
+            <Link className="text-white text-decoration-none nav-link-custom" to="/about">
+              À propos
+            </Link>
+
+            <Link className="text-white text-decoration-none nav-link-custom" to="/profile">
+              Profil
+            </Link>
+
+            <Link className="text-white text-decoration-none nav-link-custom" to="/login">
+              Login
+            </Link>
+
+            {/* ARTICLE */}
+            <div className="dropdown">
+              <span
+                className="text-white dropdown-toggle nav-link-custom"
+                data-bs-toggle="dropdown"
+                style={{ cursor: "pointer" }}
+              >
+                Article
+              </span>
+
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-article">
+                    Ajouter Article
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* ACQUISITION */}
+            <div className="dropdown">
+              <span
+                className="text-white dropdown-toggle nav-link-custom"
+                data-bs-toggle="dropdown"
+                style={{ cursor: "pointer" }}
+              >
+                Acquisition
+              </span>
+
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-acquisition">
+                    Ajouter Acquisition
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* acquisition */}
+            <div className="dropdown">
+              <span
+                className="text-white dropdown-toggle nav-link-custom"
+                data-bs-toggle="dropdown"
+                style={{ cursor: "pointer" }}
+              >
+                acquisition
+              </span>
+
+              <ul className="dropdown-menu">
+
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-caracteristique">
+                    Caractéristique
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-bc-reparation">
+                    BC Réparation
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-detail-affectation">
+                    Détail Affectation
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-detail-inventaire">
+                    Détail Inventaire
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-livraison">
+                    Livraison
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/ajouter-lot">
+                    Lot
+                  </Link>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
         </div>
       </nav>
 
-      {/* Contenu dynamique */}
-      <main className="container py-4">
+      {/* CONTENT */}
+      <div className="container mt-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -68,9 +171,9 @@ function App() {
           <Route path="/ajouter-livraison" element={<AjouterLivraison />} />
           <Route path="/ajouter-lot" element={<AjouterLot />} />
         </Routes>
-      </main>
+      </div>
 
-      {/* Footer */}
+      {/* FOOTER */}
       <footer className="bg-light text-center p-3 mt-4 border-top">
         © 2026 Ministère de la Transition Énergétique
       </footer>
@@ -78,4 +181,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

@@ -1,12 +1,12 @@
 import React from "react";
 
-function Article() {
+function AjouterArticle() {
   return (
-    <div className="container mt-5 text-center">
-      <h1>Page Article</h1>
-      <p>Gestion des articles disponible.</p>
+    <div className="container mt-4">
+      <h2>Ajouter Article</h2>
+      <p>Page Ajouter Article fonctionne correctement.</p>
     </div>
   );
 }
 
-export default Article;
+export default AjouterArticle;
